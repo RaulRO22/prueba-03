@@ -1,0 +1,415 @@
+  [1m[35m (513.8ms)[0m  [1m[35mCREATE DATABASE "prueba-03_development" ENCODING = 'unicode'[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (408.7ms)[0m  [1m[35mCREATE DATABASE "prueba-03_test" ENCODING = 'unicode'[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "prueba-03_development" ENCODING = 'unicode'[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "prueba-03_test" ENCODING = 'unicode'[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "prueba-03_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "prueba-03_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5281837295380512090)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateAplicacions (20190426003818)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (5.1ms)[0m  [1m[35mCREATE TABLE "aplicacions" ("id" bigserial primary key, "nombre" character varying, "descripcion" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190426003818_create_aplicacions.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190426003818"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-26 00:38:26.450967"], ["updated_at", "2019-04-26 00:38:26.450967"]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5281837295380512090)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "prueba-03_development" ENCODING = 'unicode'[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE "prueba-03_test" ENCODING = 'unicode'[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "prueba-03_development" ENCODING = 'unicode'[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "prueba-03_test" ENCODING = 'unicode'[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/bin/rake:23
+Started GET "/products" for ::1 at 2019-04-25 18:46:39 -0600
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/products"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-04-25 18:46:42 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:48:03 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 8ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:48:26 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (2.0ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 343ms (Views: 335.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:48:30 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.5ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:48:30 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:48:41 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:51:41 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.6ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 956ms (Views: 943.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:52:00 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:52:14 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 829ms (Views: 827.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:53:40 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2019-04-25 18:54:10 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:14
+  Rendered aplicacions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions/new" for ::1 at 2019-04-25 18:54:14 -0600
+Processing by AplicacionsController#new as HTML
+  Rendering aplicacions/new.html.erb within layouts/application
+  Rendered aplicacions/_form.html.erb (22.8ms)
+  Rendered aplicacions/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 64ms (Views: 46.1ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/aplicacions" for ::1 at 2019-04-25 18:56:03 -0600
+Processing by AplicacionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n4JuUlyFLcayhX13T1SIRvBAA+qngmwlh7cflAkabrflxR6XY6A/Rw+lNlzkBZBhY0IggORBCgKiDkAJvUgQ+w==", "aplicacion"=>{"nombre"=>"Tennis", "descripcion"=>"The [SERIES] by [BRAND] is more supportive than your average shoe. This shoe is perfect for people with an active style. Whether your life involves walking, jogging, or being on your feet frequently, this shoe will support you. Robust [FABRIC1] combines with heavy-duty [SOLE] sole to ensure a long lifespan for your favorite everyday-wear shoes. Built to support and cushion your feet all day long, their strategically engineered design with extra comfort assures you that no matter what the day throws at you, you can take it and keep going."}, "commit"=>"Create Aplicacion"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/aplicacions_controller.rb:30
+  [1m[36mAplicacion Create (2.3ms)[0m  [1m[32mINSERT INTO "aplicacions" ("nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nombre", "Tennis"], ["descripcion", "The [SERIES] by [BRAND] is more supportive than your average shoe. This shoe is perfect for people with an active style. Whether your life involves walking, jogging, or being on your feet frequently, this shoe will support you. Robust [FABRIC1] combines with heavy-duty [SOLE] sole to ensure a long lifespan for your favorite everyday-wear shoes. Built to support and cushion your feet all day long, their strategically engineered design with extra comfort assures you that no matter what the day throws at you, you can take it and keep going."], ["created_at", "2019-04-26 00:56:03.707070"], ["updated_at", "2019-04-26 00:56:03.707070"]]
+  ↳ app/controllers/aplicacions_controller.rb:30
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/aplicacions_controller.rb:30
+Redirected to http://localhost:3000/aplicacions/1
+Completed 302 Found in 36ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/aplicacions/1" for ::1 at 2019-04-25 18:56:03 -0600
+Processing by AplicacionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" WHERE "aplicacions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:67
+  Rendering aplicacions/show.html.erb within layouts/application
+  Rendered aplicacions/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 26ms (Views: 20.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:56:05 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:14
+  Rendered aplicacions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:57:06 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:45
+  Rendered aplicacions/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:57:16 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.4ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:45
+  Rendered aplicacions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 24.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:57:16 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:45
+  Rendered aplicacions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:57:17 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:45
+  Rendered aplicacions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:58:47 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  Rendered aplicacions/index.html.erb within layouts/application (218.4ms)
+Completed 500 Internal Server Error in 224ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `aplicacion' for #<#<Class:0x007feb97b10230>:0x007feb97f4e090>
+Did you mean?  @aplicacions):
+    12:   </thead>
+    13:   <tbody>
+    14:     <tr>
+    15:         <td><%= aplicacion.nombre %></td>
+    16:         <td><%= aplicacion.descripcion %></td>
+    17:         <td><%= link_to 'Show', aplicacion %></td>
+    18:         <td><%= link_to 'Edit', edit_aplicacion_path(aplicacion) %></td>
+  
+app/views/aplicacions/index.html.erb:15:in `_app_views_aplicacions_index_html_erb__1686059620374289204_70324921726260'
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:58:49 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Aplicacion Load (0.1ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:10
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  [1m[36mCACHE Aplicacion Load (0.0ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /Users/raulrodriguez/.rvm/rubies/ruby-2.4.0/lib/ruby/gems/2.4.0/gems/did_you_mean-1.1.0/lib/did_you_mean/core_ext/name_error.rb:6
+  Rendered aplicacions/index.html.erb within layouts/application (234.2ms)
+Completed 500 Internal Server Error in 241ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `aplicacion' for #<#<Class:0x007feb97b10230>:0x007feb95cc78a0>
+Did you mean?  @aplicacions):
+    12:   </thead>
+    13:   <tbody>
+    14:     <tr>
+    15:         <td><%= aplicacion.nombre %></td>
+    16:         <td><%= aplicacion.descripcion %></td>
+    17:         <td><%= link_to 'Show', aplicacion %></td>
+    18:         <td><%= link_to 'Edit', edit_aplicacion_path(aplicacion) %></td>
+  
+app/views/aplicacions/index.html.erb:15:in `_app_views_aplicacions_index_html_erb__1686059620374289204_70324903654420'
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:59:36 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:14
+  Rendered aplicacions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 18:59:56 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:14
+  Rendered aplicacions/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:00:22 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:15
+  Rendered aplicacions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:00:42 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:17
+  Rendered aplicacions/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:00:50 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.4ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:18
+  Rendered aplicacions/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:00:57 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:02:30 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:03:08 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:03:22 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:03:33 -0600
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms)
+
+

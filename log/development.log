@@ -413,3 +413,14 @@ Processing by AplicacionsController#index as HTML
 Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/aplicacions" for ::1 at 2019-04-25 19:07:43 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.6ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 205ms (Views: 189.1ms | ActiveRecord: 3.9ms)
+
+

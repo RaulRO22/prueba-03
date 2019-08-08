@@ -446,3 +446,155 @@ Processing by AplicacionsController#index as HTML
 Completed 200 OK in 176ms (Views: 161.6ms | ActiveRecord: 3.5ms)
 
 
+Started GET "/stocks" for ::1 at 2019-08-08 11:42:08 -0500
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/raulrodriguez/.rvm/gems/ruby-2.4.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/stocks"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2019-08-08 11:42:11 -0500
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (2.5ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 211ms (Views: 196.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/aplicacions/1" for ::1 at 2019-08-08 11:42:15 -0500
+Processing by AplicacionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAplicacion Load (3.6ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" WHERE "aplicacions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:67
+  Rendering aplicacions/show.html.erb within layouts/application
+  Rendered aplicacions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 28ms (Views: 18.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/aplicacions/1" for ::1 at 2019-08-08 11:42:17 -0500
+Processing by AplicacionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" WHERE "aplicacions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:67
+  Rendering aplicacions/show.html.erb within layouts/application
+  Rendered aplicacions/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions/1" for ::1 at 2019-08-08 11:42:18 -0500
+Processing by AplicacionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" WHERE "aplicacions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:67
+  Rendering aplicacions/show.html.erb within layouts/application
+  Rendered aplicacions/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions/1" for ::1 at 2019-08-08 11:42:18 -0500
+Processing by AplicacionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" WHERE "aplicacions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:67
+  Rendering aplicacions/show.html.erb within layouts/application
+  Rendered aplicacions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 20.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions/1" for ::1 at 2019-08-08 11:42:19 -0500
+Processing by AplicacionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" WHERE "aplicacions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:67
+  Rendering aplicacions/show.html.erb within layouts/application
+  Rendered aplicacions/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/aplicacions/1" for ::1 at 2019-08-08 11:42:19 -0500
+Processing by AplicacionsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" WHERE "aplicacions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:67
+  Rendering aplicacions/show.html.erb within layouts/application
+  Rendered aplicacions/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-08-08 11:42:21 -0500
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/aplicacions/new" for ::1 at 2019-08-08 11:42:25 -0500
+Processing by AplicacionsController#new as HTML
+  Rendering aplicacions/new.html.erb within layouts/application
+  Rendered aplicacions/_form.html.erb (12.6ms)
+  Rendered aplicacions/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-08-08 11:42:27 -0500
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/aplicacions/1" for ::1 at 2019-08-08 11:42:36 -0500
+Processing by AplicacionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8zr3WeBgTRJewFH2aU0pfqHqzjzHqfVefdC1jqh8cbhI++bSMz+cUXdOs2v4u1AGhqNcemaWzY3tzj3h06vswg==", "id"=>"1"}
+  [1m[36mAplicacion Load (0.3ms)[0m  [1m[34mSELECT  "aplicacions".* FROM "aplicacions" WHERE "aplicacions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/aplicacions_controller.rb:57
+  [1m[36mAplicacion Destroy (0.3ms)[0m  [1m[31mDELETE FROM "aplicacions" WHERE "aplicacions"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/aplicacions_controller.rb:57
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/aplicacions_controller.rb:57
+Redirected to http://localhost:3000/aplicacions
+Completed 302 Found in 11ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/aplicacions" for ::1 at 2019-08-08 11:42:36 -0500
+Processing by AplicacionsController#index as HTML
+  Rendering aplicacions/index.html.erb within layouts/application
+  [1m[36mAplicacion Load (0.2ms)[0m  [1m[34mSELECT "aplicacions".* FROM "aplicacions"[0m
+  ↳ app/views/aplicacions/index.html.erb:19
+  Rendered aplicacions/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.2ms)
+
+

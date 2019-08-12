@@ -4,22 +4,18 @@ jobs:
     machine:
        image: ubuntu-1604:201903-01
     steps:
+      - run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+      - run: echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV && echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
+      - run: nvm install 8
       - checkout
-      - run: sudo pip install -U selenium
-      - run: sudo apt-get install nginx
-      - run: sudo cp ./selenium-tutorial-main.html /var/www/html/selenium-tutorial-main.html
-      - run:
-          name: Download Selenium
-          command: |
-            python test/Qxf2_Tutorial_BrowserStack_Test.py
-      - run:
-          name: Start Selenium
-          command: |
-            java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
-          background: true
-      - run: wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
-          # Unzip the browserstack binary file
-      - run: unzip BrowserStackLocal-linux-x64.zip
-          # Run the file with your access key
-          - ./BrowserStackLocal $BROWSERSTACK KEY:
-              background: true
+      # Get Java dependencies before trying to build tests.
+      - run: mvn dependency:go-offline
+      # Installs @percy/agent
+      - run: npm install
+      - run: npm test
+      - checkout
+      # Get Java dependencies before trying to build tests.
+      - run: mvn dependency:go-offline
+      # Installs @percy/agent
+      - run: npm install
+      - run: npm test

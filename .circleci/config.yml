@@ -3,6 +3,9 @@ jobs:
   build:
     machine:
        image: circleci/python:3.6.2-stretch-browsers
+    steps:
+      - checkout
+      - run: mkdir test-reports
     dependencies:
       pre:
         - sudo pip install -U selenium

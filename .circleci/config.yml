@@ -4,8 +4,18 @@ jobs:
     machine:
        image: ubuntu-1604:201903-01
     steps:
-       - checkout
-      - run: sudo pip install selenium
-      - run: sudo pip install requests
-      - run: 
-          command: python tests/test_selenium.py
+      - run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+      - run: echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV && echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
+      - run: nvm install 8
+      - checkout
+
+      - run: mvn dependency:go-offline
+
+      - run: npm install
+      - run: npm test
+      - checkout
+
+      - run: mvn dependency:go-offline
+      
+      - run: npm install
+      - run: npm test

@@ -2,28 +2,24 @@ version: 2
 jobs:
   build:
     machine:
-      image: ubuntu-1604:201903-01
+       image: circleci/python:3.6.2-stretch-browsers
     steps:
       - checkout
-      - run: mkdir test-reports
-    dependencies:
-      pre:
-        - sudo pip install -U selenium
-        - sudo apt-get install nginx
-        # Copy the html page to nginx default public www location
-        - sudo cp ./selenium-tutorial-main.html /var/www/html/selenium-tutorial-main.html
- 
-        ## Running Tests
-      test:
-        pre:
-          # MAGIC HAPPENS HERE
-          # Download the browserstack binary file to create a tunnel
-          - wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
+      - run: sudo pip install -U selenium
+      - run: sudo apt-get install nginx
+      - run: sudo cp ./selenium-tutorial-main.html /var/www/html/selenium-tutorial-main.html
+      - run:
+          name: Download Selenium
+          command: |
+            python test/Qxf2_Tutorial_BrowserStack_Test.py
+      - run:
+          name: Start Selenium
+          command: |
+            java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
+          background: true
+      - run: wget "https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip"
           # Unzip the browserstack binary file
-          - unzip BrowserStackLocal-linux-x64.zip
+      - run: unzip BrowserStackLocal-linux-x64.zip
           # Run the file with your access key
           - ./BrowserStackLocal $BROWSERSTACK KEY:
               background: true
- 
-        override:
-          - python test/Qxf2_Tutorial_BrowserStack_Test.py

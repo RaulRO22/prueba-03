@@ -6,7 +6,7 @@ jobs:
     steps:
       - run: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
       - run: echo 'export NVM_DIR=$HOME/.nvm' >> $BASH_ENV && echo 'source $NVM_DIR/nvm.sh' >> $BASH_ENV
-      - run: nvm install 8
+      - run: nvm install
       - checkout
       # Get Java dependencies before trying to build tests.
       - run: mvn dependency:go-offline

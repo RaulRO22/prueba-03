@@ -5,7 +5,7 @@ jobs:
       image: ubuntu-1604:201903-01
 
     working_directory: ~/circleci-demo-java-spring # directory where steps will run
-    
+
     steps: # a collection of executable commands
 
       - checkout # check out source code to working directory
@@ -22,7 +22,7 @@ jobs:
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
       
       - run: mvn package # run the actual tests
-      
+      - run: mvn clean compile exec:java
       - store_test_results: # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard. 
       # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
           path: target/surefire-reports

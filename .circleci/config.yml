@@ -1,17 +1,22 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/python:3.6.2-stretch-browsers
+    machine:
+      image: ubuntu-1604:201903-01
+    working_directory: ~/circleci-demo-java-spring
     steps:
-      - checkout
-      - run: mkdir test-reports
-      - run:
-          name: Download Selenium
-          command: |
-            curl -O http://selenium-release.storage.googleapis.com/3.5/selenium-server-standalone-3.5.3.jar
-      - run:
-          name: Start Selenium
-          command: |
-            java -jar selenium-server-standalone-3.5.3.jar -log test-reports/selenium.log
-          background: true
+    - checkout
+    - restore_cache:
+        key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+    - run: mvn dependency:go-offline
+    - save_cache:
+        paths:
+        - ~/.m2
+        key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+    - run: mvn package
+    - run: mvn clean compile exec:java
+workflows:
+  version: 2
+  workflow:
+    jobs:
+    - build

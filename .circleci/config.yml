@@ -1,9 +1,10 @@
 version: 2
 jobs:
   build:
+    image: circleci/python:3.6.2-stretch-browsers
+    
     machine:
-       image: circleci/python:3.6.2-stretch-browsers
-       
+      image: ubuntu-1604:201903-01
     working_directory: ~/circleci-demo-java-spring # directory where steps will run
 
     docker: # run the steps with Docker

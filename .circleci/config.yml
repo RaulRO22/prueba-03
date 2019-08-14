@@ -20,7 +20,7 @@ jobs:
     - run: 
         name: Correr programa
         command: |
-                mvn clean compile exec:java
+                mvn -Dtest=com.godiva.test.Header clean test
 workflows:
   version: 2
   workflow:

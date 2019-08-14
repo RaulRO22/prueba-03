@@ -7,12 +7,13 @@ jobs:
     steps:
     - checkout
     - restore_cache:
+        paths:
         key: prueba-03-{{ checksum "pom.xml" }}
+    - run: mvn dependency:go-offline
     - run: 
-        name: mvm
+        name: mvm package
         command: |
-            mvn dependency:go-offline
-            mvn package 
+            mvn package
     - run: 
         name: correr
         command: |

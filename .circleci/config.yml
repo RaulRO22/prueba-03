@@ -10,10 +10,6 @@ jobs:
         paths:
         key: prueba-03-{{ checksum "test/Automation/pom.xml" }}
     - run: mvn dependency:go-offline
-    - save_cache:
-        paths:
-            - ~/.m2
-        key: prueba-03-{{ test/Automation/checksum "pom.xml" }}
     - run: 
         name: mvm package
         command: |

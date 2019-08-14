@@ -8,7 +8,7 @@ jobs:
     - checkout
     - restore_cache:
         paths:
-            - ~/.test/Automation
+            - ~/test/Automation
         key: prueba-03-{{ checksum "test/Automation/pom.xml" }}
     - run: mvn dependency:go-offline
     - run: 

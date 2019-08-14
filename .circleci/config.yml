@@ -17,4 +17,6 @@ jobs:
     - run: 
         name: correr
         command: |
+            cd prueba-03/test/Automation/
+
             mvn -Dtest=com.godiva.test.Header clean test

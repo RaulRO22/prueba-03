@@ -8,18 +8,8 @@ jobs:
     - checkout
     - restore_cache:
         key: prueba-03-{{ checksum "test/Automation/pom.xml" }}
-    - run: 
-        name: mvn
-        command: |
-            mvn dependency:go-offline
-    - save_cache: # saves the project dependencies
-          paths:
-            - ~/.m2
-          key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
-    - run: 
-        name: mvn
-        command: |
-            mvn package
+    - run: mvn dependency:go-offline
+    - run: mvn package
     - run: 
         name: correr
         command: |

@@ -12,6 +12,10 @@ jobs:
         name: mvn
         command: |
             mvn dependency:go-offline
+    - save_cache: # saves the project dependencies
+          paths:
+            - ~/.m2
+          key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
     - run: 
         name: mvn
         command: |

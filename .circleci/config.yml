@@ -7,6 +7,8 @@ jobs:
     steps:
     - checkout
     - restore_cache:
+        paths:
+            - ~/.test/Automation
         key: prueba-03-{{ checksum "test/Automation/pom.xml" }}
     - run: mvn dependency:go-offline
     - run: 
@@ -16,9 +18,4 @@ jobs:
     - run: 
         name: correr
         command: |
-            mvn clean test
-workflows:
-  version: 2
-  workflow:
-    jobs:
-    - build
+            mvn -Dtest=com.godiva.test.Header clean test

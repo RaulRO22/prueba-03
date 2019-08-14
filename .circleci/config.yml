@@ -13,7 +13,8 @@ jobs:
     - run: 
         name: correr
         command: |
-            ./test/Automation/ mvn -Dtest=com.godiva.test.Header clean test
+            cd test/Automation/
+            mvn -Dtest=com.godiva.test.Header clean test
 workflows:
   version: 2
   workflow:

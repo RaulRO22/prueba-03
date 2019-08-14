@@ -8,8 +8,7 @@ jobs:
     - checkout
     - restore_cache:
         paths:
-            - ~/test/Automation
-        key: prueba-03-{{ checksum "test/Automation/pom.xml" }}
+        key: prueba-03/test/Automation-{{ checksum "pom.xml" }}
     - run: mvn dependency:go-offline
     - run: 
         name: mvm package

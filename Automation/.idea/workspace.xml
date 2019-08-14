@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8541c67-1278-4a98-a355-6a58d7908b57" name="Default Changelist" comment="" />
+    <list default="true" id="1fb3a096-02db-4f4c-bc04-f4b3eca0d3d1" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +15,14 @@
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1PQBhBSntwqRZE3t6JHnK0RObrh" />
+  <component name="ProjectId" id="1PQUfp3PAzcEjja24KgZA5HKSNu" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -33,9 +36,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.Header">
+  <component name="RunManager">
     <configuration name="Header" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BrowserTesting" />
+      <module name="Automation" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.godiva.test.*" />
@@ -49,26 +52,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Header.isNavBarVisible" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="BrowserTesting" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.godiva.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.godiva.test" />
-      <option name="MAIN_CLASS_NAME" value="com.godiva.test.Header" />
-      <option name="METHOD_NAME" value="isNavBarVisible" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Header" />
-        <item itemvalue="JUnit.Header.isNavBarVisible" />
       </list>
     </recent_temporary>
   </component>
@@ -77,12 +63,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f8541c67-1278-4a98-a355-6a58d7908b57" name="Default Changelist" comment="" />
-      <created>1565796556150</created>
+      <changelist id="1fb3a096-02db-4f4c-bc04-f4b3eca0d3d1" name="Default Changelist" comment="" />
+      <created>1565805919224</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1565796556150</updated>
-      <workItem from="1565796561468" duration="901000" />
+      <updated>1565805919224</updated>
+      <workItem from="1565805923361" duration="35000" />
+      <workItem from="1565805967517" duration="227000" />
     </task>
     <servers />
   </component>

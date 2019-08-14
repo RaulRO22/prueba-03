@@ -12,7 +12,7 @@ jobs:
         name: mvm
         command: |
             mvn dependency:go-offline
-            mvn package
+            mvn package 
     - run: 
         name: correr
         command: |

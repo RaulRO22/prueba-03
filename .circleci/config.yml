@@ -7,7 +7,7 @@ jobs:
     steps:
     - checkout
     - restore_cache:
-        key: prueba-03/test/Automation-{{ checksum "pom.xml" }}
+        key: prueba-03-{{ checksum "test/Automation/pom.xml" }}
     - run: 
         name: mvn
         command: |

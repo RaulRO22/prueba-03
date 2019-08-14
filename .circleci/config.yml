@@ -10,6 +10,10 @@ jobs:
         paths:
         key: prueba-03-{{ checksum "test/Automation/pom.xml" }}
     - run: mvn dependency:go-offline
+    - save_cache:
+        paths:
+            - ~/.m2
+        key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
     - run: 
         name: mvm package
         command: |

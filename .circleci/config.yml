@@ -16,7 +16,6 @@ jobs:
     - run: 
         name: correr
         command: |
-            cd test/Automationsrc/test/java/com/godiva/test
             mvn clean test
 workflows:
   version: 2

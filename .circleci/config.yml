@@ -13,8 +13,14 @@ jobs:
         paths:
         - ~/.m2
         key: prueba-03-{{ checksum "pom.xml" }}
-    - run: mvn package
-    - run: mvn clean compile exec:java
+    - run: 
+        name: mvn package
+        command: |
+                mvn package
+    - run: 
+        name: Correr programa
+        command: |
+                mvn clean compile exec:java
 workflows:
   version: 2
   workflow:

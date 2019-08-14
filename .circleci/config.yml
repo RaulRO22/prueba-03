@@ -7,7 +7,7 @@ jobs:
     steps:
     - checkout
     - restore_cache:
-        key: prueba-03-{{ checksum "test/Automation/pom.xml" }}
+        key: prueba-03-{{ checksum "pom.xml" }}
     - run: mvn dependency:go-offline
     - run: mvn package
     - run: 

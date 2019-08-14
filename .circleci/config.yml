@@ -6,8 +6,6 @@ jobs:
     working_directory: ~/prueba-03/test/Automation
     steps:
     - checkout
-    - restore_cache:
-        key: Automation-{{ checksum "pom.xml" }}
     - run: mvn dependency:go-offline
     - run: 
         name: correr

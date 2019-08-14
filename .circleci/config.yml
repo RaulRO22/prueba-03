@@ -11,7 +11,7 @@ jobs:
     - run: 
         name: mvn
         command: |
-            mvn package
+            mvn dependency:go-offline
     - run: 
         name: mvn
         command: |

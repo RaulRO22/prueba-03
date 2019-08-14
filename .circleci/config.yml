@@ -3,16 +3,16 @@ jobs:
   build:
     machine:
       image: ubuntu-1604:201903-01
-    working_directory: ~/circleci-demo-java-spring
+    working_directory: ~/prueba-03
     steps:
     - checkout
     - restore_cache:
-        key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+        key: prueba-03-{{ checksum "pom.xml" }}
     - run: mvn dependency:go-offline
     - save_cache:
         paths:
         - ~/.m2
-        key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+        key: prueba-03-{{ checksum "pom.xml" }}
     - run: mvn package
     - run: mvn clean compile exec:java
 workflows:

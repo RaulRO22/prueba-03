@@ -3,11 +3,11 @@ jobs:
   build:
     machine:
       image: ubuntu-1604:201903-01
-    working_directory: ~/prueba-03
+    working_directory: ~/prueba-03/Automation
     steps:
     - checkout
     - restore_cache:
-        key: prueba-03-{{ checksum "pom.xml" }}
+        key: prueba-03/Automation-{{ checksum "pom.xml" }}
     - run: mvn dependency:go-offline
     - run: 
         name: correr

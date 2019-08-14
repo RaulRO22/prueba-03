@@ -34,7 +34,7 @@ public class Header {
 
     @Test
     public void isNavBarVisible() {
-        WebElement navbar = driver.findElement(By.xpath("//nav[@role='navign']"));
+        WebElement navbar = driver.findElement(By.xpath("//nav[@role='navigation']"));
         Assertions.assertTrue(navbar.isDisplayed());
     }
 
